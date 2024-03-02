@@ -62,7 +62,7 @@ M.nvimtree = {
       },
     },
   },
-},
+}
 
 M.telescope = {
     layout_config = {
