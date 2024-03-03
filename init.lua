@@ -9,3 +9,4 @@ vim.g.neovide_scroll_animation_length = 0.1
 vim.opt.guifont = "FiraCode Nerd Font:h13"
 vim.g.neovide_input_macos_alt_is_meta = true
 vim.opt.relativenumber = true
+vim.opt.pumheight = 7

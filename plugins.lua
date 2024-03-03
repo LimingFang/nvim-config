@@ -29,6 +29,11 @@ local plugins = {
     opts = overrides.nvimtree,
   },
 
+  {
+    "hrsh7th/nvim-cmp",
+    opts = require("custom/configs/cmp"),
+  },
+
   -- Install a plugin
   {
     "max397574/better-escape.nvim",
@@ -52,7 +57,7 @@ local plugins = {
     event = { "BufReadPre", "BufNewFile" },
     config = function()
       -- require "custom.configs.lint"
-      opt = require "custom.configs.lint" 
+      opt = require "custom.configs.lint"
       require("lint").linters_by_ft = opt
     end,
   },
