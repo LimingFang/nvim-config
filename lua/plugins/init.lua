@@ -20,7 +20,7 @@ return {
         "mfussenegger/nvim-lint",
         event = { "BufReadPre", "BufNewFile" },
         config = function()
-            local opt = require "custom.configs.linter"
+            local opt = require "configs.linter"
             require("lint").linters_by_ft = opt
         end,
     },
