@@ -11,8 +11,7 @@ return {
     {
         "neovim/nvim-lspconfig",
         config = function()
-            require("nvchad.configs.lspconfig").defaults()
-            require "configs.lspconfig"
+            return require "configs.lspconfig"
         end,
     },
 
@@ -36,10 +35,20 @@ return {
     -- },
     --
     {
+        "hrsh7th/nvim-cmp",
+        opts = function()
+            return require "configs.cmp"
+        end,
+        config = function(_, opts)
+            require("cmp").setup(opts)
+        end,
+    },
+
+    {
         "nvim-tree/nvim-tree.lua",
         cmd = { "NvimTreeToggle", "NvimTreeFocus" },
         opts = function()
-            return require "nvchad.configs.nvimtree"
+            return require "configs/nvimtree"
         end,
         config = function(_, opts)
             dofile(vim.g.base46_cache .. "nvimtree")
